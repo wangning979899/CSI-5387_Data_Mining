@@ -1,0 +1,13 @@
+
+ Least Angle Regression with alpha 0.0005 R2 score: 0.5827929745664573
+ Least Angle Regression with alpha 0.0005 Mean absolute error: 6.179574808118285
+ Least Angle Regression with alpha 0.0005 Mean squared error: 70.09032935288998
+ Least Angle Regression with alpha 0.005 R2 score: 0.5829905928467048
+ Least Angle Regression with alpha 0.005 Mean absolute error: 6.172300707691317
+ Least Angle Regression with alpha 0.005 Mean squared error: 70.05712969539543
+ Least Angle Regression with alpha 0.05 R2 score: 0.5715640841795158
+ Least Angle Regression with alpha 0.05 Mean absolute error: 6.20050167423205
+ Least Angle Regression with alpha 0.05 Mean squared error: 71.97677080164166
+ Least Angle Regression with alpha 0.1 R2 score: 0.5320750042782039
+ Least Angle Regression with alpha 0.1 Mean absolute error: 6.516697553895829
+ Least Angle Regression with alpha 0.1 Mean squared error: 78.61089354501914

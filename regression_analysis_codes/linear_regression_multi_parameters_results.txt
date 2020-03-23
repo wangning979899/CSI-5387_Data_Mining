@@ -1,0 +1,73 @@
+
+ LinearRegression with degree 1, bias True, interaction True R2 score: 0.5827392405129774
+ LinearRegression with degree 1, bias True, interaction True Mean absolute error: 6.181416940123915
+ LinearRegression with degree 1, bias True, interaction True Mean squared error: 70.0993566157985
+ LinearRegression with degree 2, bias True, interaction True R2 score: 0.640467726597034
+ LinearRegression with degree 2, bias True, interaction True Mean absolute error: 5.3851034967871145
+ LinearRegression with degree 2, bias True, interaction True Mean squared error: 60.40103334698342
+ LinearRegression with degree 3, bias True, interaction True R2 score: -8.636016662393228
+ LinearRegression with degree 3, bias True, interaction True Mean absolute error: 18.578846153846147
+ LinearRegression with degree 3, bias True, interaction True Mean squared error: 1618.8403846153851
+ LinearRegression with degree 4, bias True, interaction True R2 score: 0.5049489775904961
+ LinearRegression with degree 4, bias True, interaction True Mean absolute error: 5.7262134145015535
+ LinearRegression with degree 4, bias True, interaction True Mean squared error: 83.16803671057586
+ LinearRegression with degree 5, bias True, interaction True R2 score: 0.5929307924604111
+ LinearRegression with degree 5, bias True, interaction True Mean absolute error: 5.455588354719704
+ LinearRegression with degree 5, bias True, interaction True Mean squared error: 68.38718690372228
+ LinearRegression with degree 6, bias True, interaction True R2 score: 0.5615253138301748
+ LinearRegression with degree 6, bias True, interaction True Mean absolute error: 5.525305149106069
+ LinearRegression with degree 6, bias True, interaction True Mean squared error: 73.6632733703656
+ LinearRegression with degree 1, bias True, interaction False R2 score: 0.5827392405129774
+ LinearRegression with degree 1, bias True, interaction False Mean absolute error: 6.181416940123915
+ LinearRegression with degree 1, bias True, interaction False Mean squared error: 70.0993566157985
+ LinearRegression with degree 2, bias True, interaction False R2 score: 0.3713615692892942
+ LinearRegression with degree 2, bias True, interaction False Mean absolute error: 7.605769230769228
+ LinearRegression with degree 2, bias True, interaction False Mean squared error: 105.61057692307692
+ LinearRegression with degree 3, bias True, interaction False R2 score: -4.2327460039364
+ LinearRegression with degree 3, bias True, interaction False Mean absolute error: 19.64711538461538
+ LinearRegression with degree 3, bias True, interaction False Mean squared error: 879.0956730769235
+ LinearRegression with degree 4, bias True, interaction False R2 score: -406.8919498983507
+ LinearRegression with degree 4, bias True, interaction False Mean absolute error: 60.31923076923078
+ LinearRegression with degree 4, bias True, interaction False Mean squared error: 68525.40673076922
+ LinearRegression with degree 5, bias True, interaction False R2 score: -5.550684086850408e+16
+ LinearRegression with degree 5, bias True, interaction False Mean absolute error: 425252646.41582936
+ LinearRegression with degree 5, bias True, interaction False Mean squared error: 9.325089273770211e+18
+ LinearRegression with degree 6, bias True, interaction False R2 score: -4440891313652835.5
+ LinearRegression with degree 6, bias True, interaction False Mean absolute error: 153863734.49690995
+ LinearRegression with degree 6, bias True, interaction False Mean squared error: 7.460649409507535e+17
+ LinearRegression with degree 1, bias False, interaction True R2 score: 0.5827392405129772
+ LinearRegression with degree 1, bias False, interaction True Mean absolute error: 6.181416940123913
+ LinearRegression with degree 1, bias False, interaction True Mean squared error: 70.0993566157985
+ LinearRegression with degree 2, bias False, interaction True R2 score: 0.6404677265970341
+ LinearRegression with degree 2, bias False, interaction True Mean absolute error: 5.38510349678711
+ LinearRegression with degree 2, bias False, interaction True Mean squared error: 60.40103334698342
+ LinearRegression with degree 3, bias False, interaction True R2 score: 0.6356535511147424
+ LinearRegression with degree 3, bias False, interaction True Mean absolute error: 5.416742108327
+ LinearRegression with degree 3, bias False, interaction True Mean squared error: 61.20980962481763
+ LinearRegression with degree 4, bias False, interaction True R2 score: 0.5049489775904996
+ LinearRegression with degree 4, bias False, interaction True Mean absolute error: 5.726213414501425
+ LinearRegression with degree 4, bias False, interaction True Mean squared error: 83.16803671057534
+ LinearRegression with degree 5, bias False, interaction True R2 score: 0.5929307924604272
+ LinearRegression with degree 5, bias False, interaction True Mean absolute error: 5.4555883547196
+ LinearRegression with degree 5, bias False, interaction True Mean squared error: 68.3871869037196
+ LinearRegression with degree 6, bias False, interaction True R2 score: 0.5615253138301892
+ LinearRegression with degree 6, bias False, interaction True Mean absolute error: 5.5253051491060114
+ LinearRegression with degree 6, bias False, interaction True Mean squared error: 73.66327337036316
+ LinearRegression with degree 1, bias False, interaction False R2 score: 0.5827392405129772
+ LinearRegression with degree 1, bias False, interaction False Mean absolute error: 6.181416940123913
+ LinearRegression with degree 1, bias False, interaction False Mean squared error: 70.0993566157985
+ LinearRegression with degree 2, bias False, interaction False R2 score: 0.6753696893197786
+ LinearRegression with degree 2, bias False, interaction False Mean absolute error: 5.244103649555665
+ LinearRegression with degree 2, bias False, interaction False Mean squared error: 54.537541331820485
+ LinearRegression with degree 3, bias False, interaction False R2 score: 0.6205525999503231
+ LinearRegression with degree 3, bias False, interaction False Mean absolute error: 5.346890740355986
+ LinearRegression with degree 3, bias False, interaction False Mean squared error: 63.74675309923821
+ LinearRegression with degree 4, bias False, interaction False R2 score: -35.46754572701719
+ LinearRegression with degree 4, bias False, interaction False Mean absolute error: 22.7862635944609
+ LinearRegression with degree 4, bias False, interaction False Mean squared error: 6126.508267788891
+ LinearRegression with degree 5, bias False, interaction False R2 score: -5.295387953011752e+16
+ LinearRegression with degree 5, bias False, interaction False Mean absolute error: 410410853.3296494
+ LinearRegression with degree 5, bias False, interaction False Mean squared error: 8.896194528177743e+18
+ LinearRegression with degree 6, bias False, interaction False R2 score: -1.7592626396860732e+16
+ LinearRegression with degree 6, bias False, interaction False Mean absolute error: 301042439.1758441
+ LinearRegression with degree 6, bias False, interaction False Mean squared error: 2.955542220452689e+18

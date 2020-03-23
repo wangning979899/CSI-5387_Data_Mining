@@ -1,0 +1,4 @@
+
+ Kernel Ridge Regression R2 score: 0.4973644642287096
+ Kernel Ridge Regression Mean absolute error: 7.04162850224037
+ Kernel Ridge Regression Mean squared error: 84.44222675796685

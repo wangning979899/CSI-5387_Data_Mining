@@ -1,0 +1,22 @@
+
+ LassoRegression with alpha 5e-05 R2 score: 0.5827415180878034
+ LassoRegression with alpha 5e-05 Mean absolute error: 6.181380297071739
+ LassoRegression with alpha 5e-05 Mean squared error: 70.09897398568936
+ LassoRegression with alpha 0.0001 R2 score: 0.5827427248576564
+ LassoRegression with alpha 0.0001 Mean absolute error: 6.181331200858127
+ LassoRegression with alpha 0.0001 Mean squared error: 70.0987712496583
+ LassoRegression with alpha 0.0005 R2 score: 0.5827492839343604
+ LassoRegression with alpha 0.0005 Mean absolute error: 6.180903150245943
+ LassoRegression with alpha 0.0005 Mean squared error: 70.0976693318611
+ LassoRegression with alpha 0.001 R2 score: 0.5827578250957105
+ LassoRegression with alpha 0.001 Mean absolute error: 6.1803742292209485
+ LassoRegression with alpha 0.001 Mean squared error: 70.09623442598566
+ LassoRegression with alpha 0.005 R2 score: 0.5827465063551596
+ LassoRegression with alpha 0.005 Mean absolute error: 6.178772576406118
+ LassoRegression with alpha 0.005 Mean squared error: 70.09813596216487
+ LassoRegression with alpha 0.05 R2 score: 0.5817168633020395
+ LassoRegression with alpha 0.05 Mean absolute error: 6.167741559214009
+ LassoRegression with alpha 0.05 Mean squared error: 70.27111488224439
+ LassoRegression with alpha 0.5 R2 score: 0.49385528399080014
+ LassoRegression with alpha 0.5 Mean absolute error: 6.940113853319675
+ LassoRegression with alpha 0.5 Mean squared error: 85.03176524519185

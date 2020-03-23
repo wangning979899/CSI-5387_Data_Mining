@@ -1,0 +1,16 @@
+
+ RidgeRegression with alpha 0.005 R2 score: 0.5827179916598699
+ RidgeRegression with alpha 0.005 Mean absolute error: 6.181465359255465
+ RidgeRegression with alpha 0.005 Mean squared error: 70.10292640015464
+ RidgeRegression with alpha 0.05 R2 score: 0.5825210918990897
+ RidgeRegression with alpha 0.05 Mean absolute error: 6.182294120995541
+ RidgeRegression with alpha 0.05 Mean squared error: 70.13600534715525
+ RidgeRegression with alpha 0.5 R2 score: 0.5802474870333176
+ RidgeRegression with alpha 0.5 Mean absolute error: 6.192809939484397
+ RidgeRegression with alpha 0.5 Mean squared error: 70.5179685072787
+ RidgeRegression with alpha 5 R2 score: 0.5578694522677816
+ RidgeRegression with alpha 5 Mean absolute error: 6.410215326173059
+ RidgeRegression with alpha 5 Mean squared error: 74.27745416156975
+ RidgeRegression with alpha 50 R2 score: 0.3653565060397975
+ RidgeRegression with alpha 50 Mean absolute error: 8.039102810562998
+ RidgeRegression with alpha 50 Mean squared error: 106.61942105868269

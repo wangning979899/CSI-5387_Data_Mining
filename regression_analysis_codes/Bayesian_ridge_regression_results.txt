@@ -1,0 +1,4 @@
+
+ Bayesian Ridge Regression R2 score: 0.5810037261697238
+ Bayesian Ridge Regression Mean absolute error: 6.190171583090217
+ Bayesian Ridge Regression Mean squared error: 70.3909211497104

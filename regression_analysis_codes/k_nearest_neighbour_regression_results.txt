@@ -1,0 +1,61 @@
+
+ KNN Regression with k 1, weights uniform R2 score: 0.3281195328555023
+ KNN Regression with k 1, weights uniform Mean absolute error: 7.332692307692304
+ KNN Regression with k 1, weights uniform Mean squared error: 112.87519230769233
+ KNN Regression with k 1, weights distance R2 score: 0.32811953285550244
+ KNN Regression with k 1, weights distance Mean absolute error: 7.332692307692304
+ KNN Regression with k 1, weights distance Mean squared error: 112.87519230769232
+ KNN Regression with k 3, weights uniform R2 score: 0.596038813459506
+ KNN Regression with k 3, weights uniform Mean absolute error: 5.796153846153842
+ KNN Regression with k 3, weights uniform Mean squared error: 67.86504273504273
+ KNN Regression with k 3, weights distance R2 score: 0.5802600784411769
+ KNN Regression with k 3, weights distance Mean absolute error: 5.7811970351297655
+ KNN Regression with k 3, weights distance Mean squared error: 70.5158531643672
+ KNN Regression with k 5, weights uniform R2 score: 0.5938877719450318
+ KNN Regression with k 5, weights uniform Mean absolute error: 6.00653846153846
+ KNN Regression with k 5, weights uniform Mean squared error: 68.22641538461538
+ KNN Regression with k 5, weights distance R2 score: 0.5904130359715387
+ KNN Regression with k 5, weights distance Mean absolute error: 5.807227763182171
+ KNN Regression with k 5, weights distance Mean squared error: 68.81016727264601
+ KNN Regression with k 7, weights uniform R2 score: 0.5993044533687624
+ KNN Regression with k 7, weights uniform Mean absolute error: 5.946565934065932
+ KNN Regression with k 7, weights uniform Mean squared error: 67.31641875981157
+ KNN Regression with k 7, weights distance R2 score: 0.601625487410582
+ KNN Regression with k 7, weights distance Mean absolute error: 5.776387751115637
+ KNN Regression with k 7, weights distance Mean squared error: 66.92648754937395
+ KNN Regression with k 9, weights uniform R2 score: 0.5899790400990335
+ KNN Regression with k 9, weights uniform Mean absolute error: 6.021901709401709
+ KNN Regression with k 9, weights uniform Mean squared error: 68.88307811016143
+ KNN Regression with k 9, weights distance R2 score: 0.6073041043697746
+ KNN Regression with k 9, weights distance Mean absolute error: 5.748679741832482
+ KNN Regression with k 9, weights distance Mean squared error: 65.97248603771406
+ KNN Regression with k 11, weights uniform R2 score: 0.5563907430307442
+ KNN Regression with k 11, weights uniform Mean absolute error: 6.330594405594403
+ KNN Regression with k 11, weights uniform Mean squared error: 74.52587571519389
+ KNN Regression with k 11, weights distance R2 score: 0.5963517666705405
+ KNN Regression with k 11, weights distance Mean absolute error: 5.790102599316878
+ KNN Regression with k 11, weights distance Mean squared error: 67.81246693383078
+ Radius KNN Regression with radius 0.4, weights uniform R2 score: 0.5676716654765812
+ Radius KNN Regression with radius 0.4, weights uniform Mean absolute error: 6.20823264541545
+ Radius KNN Regression with radius 0.4, weights uniform Mean squared error: 72.63069293678433
+ Radius KNN Regression with radius 0.4, weights distance R2 score: 0.6051112361670994
+ Radius KNN Regression with radius 0.4, weights distance Mean absolute error: 5.72318405369873
+ Radius KNN Regression with radius 0.4, weights distance Mean squared error: 66.34088552569793
+ Radius KNN Regression with radius 0.6, weights uniform R2 score: 0.466215784922007
+ Radius KNN Regression with radius 0.6, weights uniform Mean absolute error: 7.1817405985601415
+ Radius KNN Regression with radius 0.6, weights uniform Mean squared error: 89.67517121580674
+ Radius KNN Regression with radius 0.6, weights distance R2 score: 0.5414682257200386
+ Radius KNN Regression with radius 0.6, weights distance Mean absolute error: 6.44521106689224
+ Radius KNN Regression with radius 0.6, weights distance Mean squared error: 77.03284249504301
+ Radius KNN Regression with radius 1.0, weights uniform R2 score: 0.26950135382958607
+ Radius KNN Regression with radius 1.0, weights uniform Mean absolute error: 8.758137673722064
+ Radius KNN Regression with radius 1.0, weights uniform Mean squared error: 122.72298302915414
+ Radius KNN Regression with radius 1.0, weights distance R2 score: 0.4257828526201849
+ Radius KNN Regression with radius 1.0, weights distance Mean absolute error: 7.502598912013621
+ Radius KNN Regression with radius 1.0, weights distance Mean squared error: 96.4678601423484
+ Radius KNN Regression with radius 10.0, weights uniform R2 score: -0.00638272608606294
+ Radius KNN Regression with radius 10.0, weights uniform Mean absolute error: 10.378256823821335
+ Radius KNN Regression with radius 10.0, weights uniform Mean squared error: 169.07121027775565
+ Radius KNN Regression with radius 10.0, weights distance R2 score: 0.2812189002362918
+ Radius KNN Regression with radius 10.0, weights distance Mean absolute error: 8.490009033206032
+ Radius KNN Regression with radius 10.0, weights distance Mean squared error: 120.75444789722454

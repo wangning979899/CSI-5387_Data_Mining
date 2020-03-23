@@ -1,0 +1,4 @@
+
+ Gaussian Process Regression R2 score: -31.347148727069577
+ Gaussian Process Regression Mean absolute error: 35.67777797992412
+ Gaussian Process Regression Mean squared error: 5434.286025148376

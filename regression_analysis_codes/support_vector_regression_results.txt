@@ -1,0 +1,16 @@
+
+ Support Vector Regression with kernel rbf R2 score: 0.43067088000186826
+ Support Vector Regression with kernel rbf Mean absolute error: 7.379941791120169
+ Support Vector Regression with kernel rbf Mean squared error: 95.64667682523599
+ Support Vector Regression with kernel linear R2 score: 0.548097276894691
+ Support Vector Regression with kernel linear Mean absolute error: 6.201667447523378
+ Support Vector Regression with kernel linear Mean squared error: 75.9191690624211
+ Support Vector Regression with kernel poly R2 score: 0.05967017061839209
+ Support Vector Regression with kernel poly Mean absolute error: 10.018853585528348
+ Support Vector Regression with kernel poly Mean squared error: 157.9743950217882
+ Support Vector Regression with kernel sigmoid R2 score: 0.30973942663764775
+ Support Vector Regression with kernel sigmoid Mean absolute error: 8.434727281989211
+ Support Vector Regression with kernel sigmoid Mean squared error: 115.96303028695881
+ Number Support Vector Regression with kernel linear R2 score: 0.5290319514283559
+ Number Support Vector Regression with kernel linear Mean absolute error: 6.638321236936625
+ Number Support Vector Regression with kernel linear Mean squared error: 79.12212313484314
