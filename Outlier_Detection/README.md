@@ -1,13 +1,13 @@
 Outlier detection based on KMeans
 
 #### Elbow Method
-Determing the K value which is 5 finally.
+Determing the K value which is 8 finally.
 ![avator](https://github.com/AaPaul/CSI-5387_Data_Mining/blob/master/Outlier_Detection/Elbow%20Plot.png)
 
 #### KMeans cluster for outlier detection
 Settings
 ```
-K=5
+K=8
 iteration=100
 threshold=3
 ```
