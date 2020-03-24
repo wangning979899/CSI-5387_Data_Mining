@@ -149,6 +149,93 @@ def ridge_path():
     # plt.show()
     plt.savefig("ridge_path.png")
 
+def plot_ic_criterion(model, name, color,EPSILON):
+    alpha_ = model.alpha_ + EPSILON
+    alphas_ = model.alphas_ + EPSILON
+    criterion_ = model.criterion_
+    plt.plot(-np.log10(alphas_), criterion_, '--', color=color,
+             linewidth=3, label='%s criterion' % name)
+    plt.axvline(-np.log10(alpha_), color=color, linewidth=3,
+                label='alpha: %s estimate' % name)
+    plt.xlabel('-log(alpha)')
+    plt.ylabel('criterion')
+
+
+def model_selection():
+    # This is to avoid division by zero while doing np.log10
+    EPSILON = 1e-5
+
+    # #############################################################################
+    # LassoLarsIC: least angle regression with BIC/AIC criterion
+
+    model_bic = linear_model.LassoLarsIC(criterion='bic')
+    model_bic.fit(data, label)
+    # alpha_bic_ = model_bic.alpha_
+
+    model_aic = linear_model.LassoLarsIC(criterion='aic')
+    model_aic.fit(data, label)
+    # alpha_aic_ = model_aic.alpha_
+
+    plt.figure()
+    plot_ic_criterion(model_aic, 'AIC', 'b', EPSILON)
+    plot_ic_criterion(model_bic, 'BIC', 'r', EPSILON)
+    plt.legend()
+    plt.title('Information-criterion for model selection')
+    plt.savefig('information_criterion_model_selection.png')
+
+    # #############################################################################
+    # LassoCV: coordinate descent
+
+    # Compute paths
+    model = linear_model.LassoCV(cv=10).fit(data, label)
+
+    # Display results
+    m_log_alphas = -np.log10(model.alphas_ + EPSILON)
+
+    plt.figure()
+    ymin, ymax = 20, 300
+    plt.plot(m_log_alphas, model.mse_path_, ':')
+    plt.plot(m_log_alphas, model.mse_path_.mean(axis=-1), 'k',
+            label='Average across the folds', linewidth=2)
+    plt.axvline(-np.log10(model.alpha_ + EPSILON), linestyle='--', color='k',
+                label='alpha: CV estimate')
+
+    plt.legend()
+
+    plt.xlabel('-log(alpha)')
+    plt.ylabel('Mean square error')
+    plt.title('Mean square error on each fold: coordinate descent ')
+    plt.axis('tight')
+    plt.ylim(ymin, ymax)
+    plt.savefig('lasso_model_selection.png')
+
+    # #############################################################################
+    # LassoLarsCV: least angle regression
+
+    # Compute paths
+    model = linear_model.LassoLarsCV(cv=10).fit(data, label)
+
+    # Display results
+    m_log_alphas = -np.log10(model.cv_alphas_ + EPSILON)
+
+    plt.figure()
+    plt.plot(m_log_alphas, model.mse_path_, ':')
+    plt.plot(m_log_alphas, model.mse_path_.mean(axis=-1), 'k',
+            label='Average across the folds', linewidth=2)
+    plt.axvline(-np.log10(model.alpha_), linestyle='--', color='k',
+                label='alpha CV')
+    plt.legend()
+
+    plt.xlabel('-log(alpha)')
+    plt.ylabel('Mean square error')
+    plt.title('Mean square error on each fold: Lars')
+    plt.axis('tight')
+    plt.ylim(ymin, ymax)
+    plt.savefig('lasso_Lars_model_selection.png')
+    # plt.show()
+
+
 # linear_regression_model()
 # voting_regression()
-ridge_path()
+# ridge_path()
+model_selection()

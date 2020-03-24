@@ -198,7 +198,7 @@ def Lasso_cross_validation_model():
 
 def Lasso_AIC():
     f_lasso = open("lasso_AIC_results.txt", 'w+')
-    lasso_regression = linear_model.LassoLarsIC(criterion='aic')
+    lasso_regression = linear_model.LassoLarsIC(criterion='aic',eps=0.002)
     lasso_regression.fit(X_train,y_train)
     prediction = lasso_regression.predict(X_test)
     prediction = np.reshape(prediction,(-1,1))
@@ -209,7 +209,7 @@ def Lasso_AIC():
 
 def Lasso_BIC():
     f_lasso = open("lasso_BIC_results.txt", 'w+')
-    lasso_regression = linear_model.LassoLarsIC(criterion='bic')
+    lasso_regression = linear_model.LassoLarsIC(criterion='bic',eps=0.002)
     lasso_regression.fit(X_train,y_train)
     prediction = lasso_regression.predict(X_test)
     prediction = np.reshape(prediction,(-1,1))
