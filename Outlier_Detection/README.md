@@ -2,7 +2,7 @@ Outlier detection based on KMeans
 
 #### Elbow Method
 Determing the K value which is 8 finally.
-![avator](https://github.com/AaPaul/CSI-5387_Data_Mining/blob/master/Outlier_Detection/Elbow%20Plot.png)
+![avator]()
 
 #### KMeans cluster for outlier detection
 Settings
