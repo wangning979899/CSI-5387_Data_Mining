@@ -1,0 +1,12 @@
+
+ mean_absolute_error: 5.244103649555665
+ mean_squared_error: 54.537541331820485
+ explained_variance_score: 0.6784790576329387
+ max_error: 35.174885868218816
+ median_absolute_error: 4.158421057193451
+ root_mean_squared_error: 7.384953712232765
+ R_squared: 0.6753696893197786
+ mean_squared_percentage_error: 0.24687519392951932
+ mean_absolute_percentage_error: 0.19148600525171092
+ mean_squared_logarithmic_error: 0.10431249571469783
+ root_mean_squared_logarithmic_error: 0.3229744505602538
