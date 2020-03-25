@@ -1,0 +1,4 @@
+
+ Passive Aggressive Regression R2 score: 0.5889463623695708
+ Passive Aggressive Regression Mean absolute error: 5.926889922377854
+ Passive Aggressive Regression Mean squared error: 69.05656685258667

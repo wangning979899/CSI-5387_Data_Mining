@@ -15,7 +15,8 @@ from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
-
+import os
+os.chdir('./results')
 
 df = pd.read_excel("Real estate valuation data set.xlsx")
 df = pd.DataFrame(df)

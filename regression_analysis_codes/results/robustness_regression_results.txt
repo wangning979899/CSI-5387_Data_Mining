@@ -1,0 +1,4 @@
+
+ Robustness Regression R2 score: 0.5866168644146018
+ Robustness Regression Mean absolute error: 5.953783145592639
+ Robustness Regression Mean squared error: 69.44791999128562

@@ -1,0 +1,4 @@
+
+ Decision Tree Regression R2 score: 0.2926545611064624
+ Decision Tree Regression Mean absolute error: 6.403846153846155
+ Decision Tree Regression Mean squared error: 118.83326923076925

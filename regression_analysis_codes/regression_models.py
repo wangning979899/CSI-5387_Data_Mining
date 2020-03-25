@@ -15,6 +15,8 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.decomposition import PCA
 import matplotlib
 import matplotlib.pyplot as plt
+import os
+os.chdir('./results')
 
 df = pd.read_excel("Real estate valuation data set.xlsx")
 
@@ -468,32 +470,31 @@ def voting_regression():
 # In practice, this list of elements forms a function that is piecewise linear
 # In isotonic regression, X should be 1d array
 
-# linear_regression_model()
-# linear_regression_model_with_interaction()
-# PCA_analysis()
-# Ridge_regression_model()
-# Ridge_cross_validation_model()
-# Lasso_regression()
-# Lasso_cross_validation_model()
-# Lasso_AIC()
-# Lasso_BIC()
-# Elastic_net_regression()
-# least_angle_regression()
-# Bayesian_ridgt_regression()
-# ARD_regression()
-# SGD_regression()
-# passive_aggressive_regression()
-# robust_regreesion()
-# Theil_Sen_robust_regreesion()
-# huber_robust_regreesion()
-# kernel_ridge_regression()
-# support_vector_regression()
-# KNN_regression()
-# gaussian_process_regression()
-# decision_tree_regression()
-# voting_regression()
+linear_regression_model()
+linear_regression_model_with_interaction()
+PCA_analysis()
+Ridge_regression_model()
+Ridge_cross_validation_model()
+Lasso_regression()
+Lasso_cross_validation_model()
+Lasso_AIC()
+Lasso_BIC()
+Elastic_net_regression()
+least_angle_regression()
+Bayesian_ridgt_regression()
+ARD_regression()
+SGD_regression()
+passive_aggressive_regression()
+robust_regreesion()
+Theil_Sen_robust_regreesion()
+huber_robust_regreesion()
+kernel_ridge_regression()
+support_vector_regression()
+KNN_regression()
+gaussian_process_regression()
+decision_tree_regression()
+voting_regression()
 
-# draw learning curve plot
 
 
 

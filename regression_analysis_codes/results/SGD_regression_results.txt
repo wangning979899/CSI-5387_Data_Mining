@@ -1,0 +1,4 @@
+
+ SGD Regression R2 score: 0.5523910750097232
+ SGD Regression Mean absolute error: 6.533816337950683
+ SGD Regression Mean squared error: 75.19781561985938

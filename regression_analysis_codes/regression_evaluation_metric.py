@@ -9,6 +9,8 @@ from sklearn import linear_model,neighbors,ensemble
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
+import os
+os.chdir('./results')
 
 # Have outliers in the data and make sure they are outliers: use MAE, more robust to outliers
 def mean_absolute_error(prediction,y_test):
@@ -235,7 +237,7 @@ def model_selection():
     # plt.show()
 
 
-# linear_regression_model()
-# voting_regression()
-# ridge_path()
+linear_regression_model()
+voting_regression()
+ridge_path()
 model_selection()
