@@ -15,8 +15,11 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.decomposition import PCA
 import matplotlib
 import matplotlib.pyplot as plt
+from regression_evaluation_metric import *
 import os
-os.chdir('./results')
+# path_current = os.getcwd()
+# print(path_current)
+# os.chdir('./results')
 
 df = pd.read_excel("Real estate valuation data set.xlsx")
 
@@ -48,23 +51,11 @@ data = pd.DataFrame(data)
 # training and testing splitting
 X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.25, random_state=0)
 
-# There are three main errors(metrics) used to evaluate models.
-# 1.mean absolute error
-# 2.mean squared error
-# 3.R2 score
-def mean_absolute_error(prediction,y_test):
-    sum = 0
-    n = len(prediction)
-    for i in range(n):
-        sum += abs(prediction[i][0]-y_test.iloc[i][0])
-    return sum/n
-
-def mean_squared_error(prediction,y_test):
-    sum = 0
-    n = len(prediction)
-    for i in range(n):
-        sum += (prediction[i][0]-y_test.iloc[i][0]) ** 2
-    return sum/n
+def possitive_prediction_correction(prediction):
+    for i in range(len(prediction)):
+        if(prediction[i][0]<0):
+            prediction[i][0] = 0
+    return prediction
 
 # linear regression model: assume the relationship between Y and X is linear
 # multivariable regression: Y(x1,x2,x3) = w1x1 + w2x2 + w3x3 + w0
@@ -84,6 +75,16 @@ def linear_regression_model():
         f_linear.write("\n LinearRegression with degree "+str(degrees[i])+" R2 score: "+str(pipeline.score(X_test,y_test)))
         f_linear.write("\n LinearRegression with degree "+str(degrees[i])+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
         f_linear.write("\n LinearRegression with degree "+str(degrees[i])+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+        f_linear.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+        f_linear.write("\n max_error: "+ str(max_error(prediction,y_test)))
+        f_linear.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+        f_linear.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+        f_linear.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+        f_linear.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+        prediction = possitive_prediction_correction(prediction)
+        f_linear.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+        f_linear.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+        f_linear.write("\n")
     f_linear.close()
 
 def linear_regression_model_with_interaction():
@@ -105,6 +106,16 @@ def linear_regression_model_with_interaction():
                 f_linear.write("\n LinearRegression with degree "+str(degrees[i])+", bias "+str(bias)+ ", interaction "+str(interaction)+" R2 score: "+str(pipeline.score(X_test,y_test)))
                 f_linear.write("\n LinearRegression with degree "+str(degrees[i])+", bias "+str(bias)+ ", interaction "+str(interaction)+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
                 f_linear.write("\n LinearRegression with degree "+str(degrees[i])+", bias "+str(bias)+ ", interaction "+str(interaction)+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+                f_linear.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+                f_linear.write("\n max_error: "+ str(max_error(prediction,y_test)))
+                f_linear.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+                f_linear.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+                f_linear.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+                f_linear.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+                prediction = possitive_prediction_correction(prediction)
+                f_linear.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+                f_linear.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+                f_linear.write("\n")
     f_linear.close()
 
 # some prediction examples
@@ -148,6 +159,15 @@ def Ridge_regression_model():
         f_ridge.write("\n RidgeRegression with alpha "+str(i)+" R2 score: "+str(ridge_regression.score(X_test,y_test)))
         f_ridge.write("\n RidgeRegression with alpha "+str(i)+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
         f_ridge.write("\n RidgeRegression with alpha "+str(i)+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+        f_ridge.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+        f_ridge.write("\n max_error: "+ str(max_error(prediction,y_test)))
+        f_ridge.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+        f_ridge.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+        f_ridge.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+        f_ridge.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+        f_ridge.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+        f_ridge.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+        f_ridge.write("\n")
     f_ridge.close()
 
 # 10-fold cross validation Ridge regression
@@ -161,6 +181,15 @@ def Ridge_cross_validation_model():
     f_ridge.write("\n 10-fold cross validation RidgeRegression R2 score: "+str(ridge_regression.score(X_test,y_test)))
     f_ridge.write("\n 10-fold cross validation RidgeRegression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_ridge.write("\n 10-fold cross validation RidgeRegression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_ridge.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_ridge.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_ridge.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_ridge.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_ridge.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_ridge.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_ridge.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_ridge.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_ridge.write("\n")
     f_ridge.close()
 
 # Lasso uses coordinate descent as the algorithm to fit the coefficients
@@ -178,6 +207,15 @@ def Lasso_regression():
         f_lasso.write("\n LassoRegression with alpha "+str(i)+" R2 score: "+str(lasso_regression.score(X_test,y_test)))
         f_lasso.write("\n LassoRegression with alpha "+str(i)+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
         f_lasso.write("\n LassoRegression with alpha "+str(i)+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+        f_lasso.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+        f_lasso.write("\n max_error: "+ str(max_error(prediction,y_test)))
+        f_lasso.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+        f_lasso.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+        f_lasso.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+        f_lasso.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+        f_lasso.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+        f_lasso.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+        f_lasso.write("\n")
     f_lasso.close()
 
 # scitkit-learn exposes objects that set the Lasso alpha parameter by cross-validation:
@@ -192,6 +230,15 @@ def Lasso_cross_validation_model():
     f_lasso.write("\n 10-fold cross validation LassoRegression R2 score: "+str(lasso_regression.score(X_test,y_test)))
     f_lasso.write("\n 10-fold cross validation LassoRegression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_lasso.write("\n 10-fold cross validation LassoRegression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_lasso.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_lasso.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n")
     f_lasso.close()
 
 # AIC is the Akaike information criterion
@@ -207,6 +254,15 @@ def Lasso_AIC():
     f_lasso.write("\n Lasso regression with Akaike information criterion R2 score: "+str(lasso_regression.score(X_test,y_test)))
     f_lasso.write("\n Lasso regression with Akaike information criterion Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_lasso.write("\n Lasso regression with Akaike information criterion Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_lasso.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_lasso.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n")
     f_lasso.close()
 
 def Lasso_BIC():
@@ -218,6 +274,15 @@ def Lasso_BIC():
     f_lasso.write("\n Lasso regression with Bayes information criterion R2 score: "+str(lasso_regression.score(X_test,y_test)))
     f_lasso.write("\n Lasso regression with Bayes information criterion Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_lasso.write("\n Lasso regression with Bayes information criterion Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_lasso.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_lasso.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_lasso.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_lasso.write("\n")
     f_lasso.close()
 
 # Elastic-Net trade-off Lasso(sparse model, L1 norm) and Ridge(regularization, L2 norm)
@@ -235,6 +300,15 @@ def Elastic_net_regression():
     f_elastic.write("\n 10-fold cross validation Elastic Net R2 score: "+str(elastic_net.score(X_test,y_test)))
     f_elastic.write("\n 10-fold cross validation Elastic Net Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_elastic.write("\n 10-fold cross validation Elastic Net Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_elastic.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_elastic.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_elastic.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_elastic.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_elastic.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_elastic.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_elastic.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_elastic.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_elastic.write("\n")
     f_elastic.close()
 
 # Least-angle regression(LARS) is a regression algorithm for high-dimensional data
@@ -255,6 +329,15 @@ def least_angle_regression():
         f_lars.write("\n Least Angle Regression with alpha "+str(i)+" R2 score: "+str(LARS_regression.score(X_test,y_test)))
         f_lars.write("\n Least Angle Regression with alpha "+str(i)+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
         f_lars.write("\n Least Angle Regression with alpha "+str(i)+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+        f_lars.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+        f_lars.write("\n max_error: "+ str(max_error(prediction,y_test)))
+        f_lars.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+        f_lars.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+        f_lars.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+        f_lars.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+        f_lars.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+        f_lars.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+        f_lars.write("\n")
     f_lars.close()
 
 # Beyesian ridge regression is more robust to ill-posed problems(noise)
@@ -267,6 +350,15 @@ def Bayesian_ridgt_regression():
     f_bayes.write("\n Bayesian Ridge Regression R2 score: "+str(Bayesian_regression.score(X_test,y_test)))
     f_bayes.write("\n Bayesian Ridge Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_bayes.write("\n Bayesian Ridge Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_bayes.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_bayes.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_bayes.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_bayes.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_bayes.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_bayes.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_bayes.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_bayes.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_bayes.write("\n")
     f_bayes.close()
 
 # Automatic Relevance Determination, similar to Bayesian Ridge Regression, lead to sparser coefficients w.
@@ -279,6 +371,15 @@ def ARD_regression():
     f_ARD.write("\n ARD Regression R2 score: "+str(ARD_regression_model.score(X_test,y_test)))
     f_ARD.write("\n ARD Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_ARD.write("\n ARD Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_ARD.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_ARD.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_ARD.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_ARD.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_ARD.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_ARD.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_ARD.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_ARD.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_ARD.write("\n")
     f_ARD.close()
 
 # Stochastic Gradient Descent
@@ -294,6 +395,15 @@ def SGD_regression():
     f_SGD.write("\n SGD Regression R2 score: "+str(SGD_regression_model.score(X_test,y_test)))
     f_SGD.write("\n SGD Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_SGD.write("\n SGD Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_SGD.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_SGD.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_SGD.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_SGD.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_SGD.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_SGD.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_SGD.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_SGD.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_SGD.write("\n")
     f_SGD.close()
 
 # Passive aggressive algorithms, for large-scale learning, similar to the Perceptron in that they do not require a learning rate
@@ -306,6 +416,15 @@ def passive_aggressive_regression():
     f_passive_aggressive.write("\n Passive Aggressive Regression R2 score: "+str(passive_aggressive_regression_model.score(X_test,y_test)))
     f_passive_aggressive.write("\n Passive Aggressive Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_passive_aggressive.write("\n Passive Aggressive Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_passive_aggressive.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_passive_aggressive.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_passive_aggressive.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_passive_aggressive.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_passive_aggressive.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_passive_aggressive.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_passive_aggressive.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_passive_aggressive.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_passive_aggressive.write("\n")
     f_passive_aggressive.close()
     
 # Robust regression aims to fit a regression model in the presence of corrput data: either outliers in the model
@@ -322,6 +441,16 @@ def robust_regreesion(): #RANdom SAmple Consensus
     f_robustness.write("\n Robustness Regression R2 score: "+str(robustness_regression_model.score(X_test,y_test)))
     f_robustness.write("\n Robustness Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_robustness.write("\n Robustness Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_robustness.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_robustness.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_robustness.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    prediction = possitive_prediction_correction(prediction)
+    f_robustness.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n")
     f_robustness.close()
 
 # RANSAC is good for strong outliers in the y direction
@@ -341,6 +470,16 @@ def Theil_Sen_robust_regreesion():
     f_robustness.write("\n Theil Sen Robustness Regression R2 score: "+str(robustness_regression_model.score(X_test,y_test)))
     f_robustness.write("\n Theil Sen Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_robustness.write("\n Theil Sen Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_robustness.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_robustness.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_robustness.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    prediction = possitive_prediction_correction(prediction)
+    f_robustness.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n")
     f_robustness.close()
 
 # Huber regressor does not ignore the effect of the ouliers but gives a lesser weight to them
@@ -354,6 +493,15 @@ def huber_robust_regreesion():
     f_robustness.write("\n Huber Robustness Regression R2 score: "+str(robustness_regression_model.score(X_test,y_test)))
     f_robustness.write("\n Huber Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_robustness.write("\n Huber Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_robustness.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_robustness.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_robustness.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_robustness.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_robustness.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_robustness.write("\n")
     f_robustness.close()
 
 # kernel ridge regression combines ridge regression and classification
@@ -367,6 +515,15 @@ def kernel_ridge_regression():
     f_kernel_ridge.write("\n Kernel Ridge Regression R2 score: "+str(kernel_ridge_regression_model.score(X_test,y_test)))
     f_kernel_ridge.write("\n Kernel Ridge Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_kernel_ridge.write("\n Kernel Ridge Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_kernel_ridge.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_kernel_ridge.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_kernel_ridge.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_kernel_ridge.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_kernel_ridge.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_kernel_ridge.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_kernel_ridge.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_kernel_ridge.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_kernel_ridge.write("\n")
     f_kernel_ridge.close()
 
 # LinearSVR is same to the SVR with linear kernel
@@ -381,6 +538,15 @@ def support_vector_regression():
         f_SVR.write("\n Support Vector Regression with kernel "+kernel_name+" R2 score: "+str(support_vector_regression_model.score(X_test,y_test)))
         f_SVR.write("\n Support Vector Regression with kernel "+kernel_name+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
         f_SVR.write("\n Support Vector Regression with kernel "+kernel_name+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+        f_SVR.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+        f_SVR.write("\n max_error: "+ str(max_error(prediction,y_test)))
+        f_SVR.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+        f_SVR.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+        f_SVR.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+        f_SVR.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+        f_SVR.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+        f_SVR.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+        f_SVR.write("\n")
     support_vector_regression_model = svm.NuSVR(kernel='linear')
     support_vector_regression_model.fit(X_train,y_train)
     prediction = support_vector_regression_model.predict(X_test)
@@ -388,6 +554,15 @@ def support_vector_regression():
     f_SVR.write("\n Number Support Vector Regression with kernel linear R2 score: "+str(support_vector_regression_model.score(X_test,y_test)))
     f_SVR.write("\n Number Support Vector Regression with kernel linear Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_SVR.write("\n Number Support Vector Regression with kernel linear Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_SVR.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_SVR.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_SVR.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_SVR.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_SVR.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_SVR.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_SVR.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_SVR.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_SVR.write("\n")
     f_SVR.close()
 
 # Neighbors-based regression can be used in cases where the data labels are continuous rather than discrete variables
@@ -404,6 +579,15 @@ def KNN_regression():
             f_KNN.write("\n KNN Regression with k "+str(k)+", weights "+weight+" R2 score: "+str(KNN_regression_model.score(X_test,y_test)))
             f_KNN.write("\n KNN Regression with k "+str(k)+", weights "+weight+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
             f_KNN.write("\n KNN Regression with k "+str(k)+", weights "+weight+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+            f_KNN.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+            f_KNN.write("\n max_error: "+ str(max_error(prediction,y_test)))
+            f_KNN.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+            f_KNN.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+            f_KNN.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+            f_KNN.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+            f_KNN.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+            f_KNN.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+            f_KNN.write("\n")
     radius_list = [0.4, 0.6, 1.0, 10.0]
     for radius in radius_list:
         for weight in weights_list:
@@ -414,6 +598,15 @@ def KNN_regression():
             f_KNN.write("\n Radius KNN Regression with radius "+str(radius)+", weights "+weight+" R2 score: "+str(KNN_regression_model.score(X_test,y_test)))
             f_KNN.write("\n Radius KNN Regression with radius "+str(radius)+", weights "+weight+" Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
             f_KNN.write("\n Radius KNN Regression with radius "+str(radius)+", weights "+weight+" Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+            f_KNN.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+            f_KNN.write("\n max_error: "+ str(max_error(prediction,y_test)))
+            f_KNN.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+            f_KNN.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+            f_KNN.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+            f_KNN.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+            f_KNN.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+            f_KNN.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+            f_KNN.write("\n")
     f_KNN.close()
 
 # Gaussian Process Regression
@@ -426,6 +619,16 @@ def gaussian_process_regression():
     f_gaussian_process.write("\n Gaussian Process Regression R2 score: "+str(gaussian_process_regression_model.score(X_test,y_test)))
     f_gaussian_process.write("\n Gaussian Process Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_gaussian_process.write("\n Gaussian Process Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_gaussian_process.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_gaussian_process.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_gaussian_process.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_gaussian_process.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_gaussian_process.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_gaussian_process.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    prediction = possitive_prediction_correction(prediction)
+    f_gaussian_process.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_gaussian_process.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_gaussian_process.write("\n")
     f_gaussian_process.close()
 
 def decision_tree_regression():
@@ -437,6 +640,15 @@ def decision_tree_regression():
     f_decision_tree.write("\n Decision Tree Regression R2 score: "+str(decision_tree_regression_model.score(X_test,y_test)))
     f_decision_tree.write("\n Decision Tree Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_decision_tree.write("\n Decision Tree Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_decision_tree.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_decision_tree.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_decision_tree.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_decision_tree.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_decision_tree.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_decision_tree.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_decision_tree.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_decision_tree.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_decision_tree.write("\n")
     f_decision_tree.close()
 
 def voting_regression():
@@ -464,6 +676,15 @@ def voting_regression():
     f_voting.write("\n Voting Regression R2 score: "+str(ensemble_model.score(X_test,y_test)))
     f_voting.write("\n Voting Regression Mean absolute error: "+str(mean_absolute_error(prediction,y_test)))
     f_voting.write("\n Voting Regression Mean squared error: "+str(mean_squared_error(prediction,y_test)))
+    f_voting.write("\n explained_variance_score: "+ str(explained_variance_score(prediction,y_test)))
+    f_voting.write("\n max_error: "+ str(max_error(prediction,y_test)))
+    f_voting.write("\n median_absolute_error: "+ str(median_absolute_error(prediction,y_test)))
+    f_voting.write("\n root_mean_squared_error: "+ str(root_mean_squared_error(prediction,y_test)))
+    f_voting.write("\n mean_squared_percentage_error: "+ str(mean_squared_percentage_error(prediction,y_test)))
+    f_voting.write("\n mean_absolute_percentage_error: "+ str(mean_absolute_percentage_error(prediction,y_test)))
+    f_voting.write("\n mean_squared_logarithmic_error: "+ str(mean_squared_logarithmic_error(prediction,y_test)))
+    f_voting.write("\n root_mean_squared_logarithmic_error: "+ str(root_mean_squared_logarithmic_error(prediction,y_test)))
+    f_voting.write("\n")
     f_voting.close()
 
 # Isotonic regression fits a non-decreasing function to data

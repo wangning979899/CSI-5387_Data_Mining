@@ -2,3 +2,11 @@
  Lasso regression with Akaike information criterion R2 score: 0.5828388170316374
  Lasso regression with Akaike information criterion Mean absolute error: 6.178512818872842
  Lasso regression with Akaike information criterion Mean squared error: 70.08262786828655
+ explained_variance_score: 0.5945316315981459
+ max_error: 36.23716745500162
+ median_absolute_error: 4.919583915762958
+ root_mean_squared_error: 8.371536768615817
+ mean_squared_percentage_error: 0.2752384856007043
+ mean_absolute_percentage_error: 0.22179820600459269
+ mean_squared_logarithmic_error: 0.0705550019825518
+ root_mean_squared_logarithmic_error: 0.2656219154786589

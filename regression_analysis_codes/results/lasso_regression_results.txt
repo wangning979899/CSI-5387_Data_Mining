@@ -2,21 +2,83 @@
  LassoRegression with alpha 5e-05 R2 score: 0.5827415180878034
  LassoRegression with alpha 5e-05 Mean absolute error: 6.181380297071739
  LassoRegression with alpha 5e-05 Mean squared error: 70.09897398568936
+ explained_variance_score: 0.5944178261127289
+ max_error: 36.25566715768315
+ median_absolute_error: 4.919906027794639
+ root_mean_squared_error: 8.372513003017037
+ mean_squared_percentage_error: 0.2754831920902079
+ mean_absolute_percentage_error: 0.2219826027404081
+ mean_squared_logarithmic_error: 0.07073237873049865
+ root_mean_squared_logarithmic_error: 0.26595559541114877
+
  LassoRegression with alpha 0.0001 R2 score: 0.5827427248576564
  LassoRegression with alpha 0.0001 Mean absolute error: 6.181331200858127
  LassoRegression with alpha 0.0001 Mean squared error: 70.0987712496583
+ explained_variance_score: 0.5944193462680696
+ max_error: 36.25575838898889
+ median_absolute_error: 4.919690201105002
+ root_mean_squared_error: 8.372500895769335
+ mean_squared_percentage_error: 0.2754842119410458
+ mean_absolute_percentage_error: 0.2219801930599412
+ mean_squared_logarithmic_error: 0.0707307296314563
+ root_mean_squared_logarithmic_error: 0.265952495065296
+
  LassoRegression with alpha 0.0005 R2 score: 0.5827492839343604
  LassoRegression with alpha 0.0005 Mean absolute error: 6.180903150245943
  LassoRegression with alpha 0.0005 Mean squared error: 70.0976693318611
+ explained_variance_score: 0.5944274042110633
+ max_error: 36.25556236225875
+ median_absolute_error: 4.919053184078495
+ root_mean_squared_error: 8.3724350897371
+ mean_squared_percentage_error: 0.27547654109232217
+ mean_absolute_percentage_error: 0.22195180300265493
+ mean_squared_logarithmic_error: 0.07070981839735298
+ root_mean_squared_logarithmic_error: 0.2659131783070425
+
  LassoRegression with alpha 0.001 R2 score: 0.5827578250957105
  LassoRegression with alpha 0.001 Mean absolute error: 6.1803742292209485
  LassoRegression with alpha 0.001 Mean squared error: 70.09623442598566
+ explained_variance_score: 0.594437994010441
+ max_error: 36.255478736729245
+ median_absolute_error: 4.9180664698489025
+ root_mean_squared_error: 8.372349397032213
+ mean_squared_percentage_error: 0.2754697851254922
+ mean_absolute_percentage_error: 0.2219178959582633
+ mean_squared_logarithmic_error: 0.07068514736884393
+ root_mean_squared_logarithmic_error: 0.2658667850049042
+
  LassoRegression with alpha 0.005 R2 score: 0.5827465063551596
  LassoRegression with alpha 0.005 Mean absolute error: 6.178772576406118
  LassoRegression with alpha 0.005 Mean squared error: 70.09813596216487
+ explained_variance_score: 0.5944461057088224
+ max_error: 36.25085019434079
+ median_absolute_error: 4.926472722657705
+ root_mean_squared_error: 8.372462956750832
+ mean_squared_percentage_error: 0.2753702593289689
+ mean_absolute_percentage_error: 0.22176384792641057
+ mean_squared_logarithmic_error: 0.07050158410920368
+ root_mean_squared_logarithmic_error: 0.2655213439804862
+
  LassoRegression with alpha 0.05 R2 score: 0.5817168633020395
  LassoRegression with alpha 0.05 Mean absolute error: 6.167741559214009
  LassoRegression with alpha 0.05 Mean squared error: 70.27111488224439
+ explained_variance_score: 0.5936456037803914
+ max_error: 36.19279811628429
+ median_absolute_error: 4.869506783713671
+ root_mean_squared_error: 8.382786820756232
+ mean_squared_percentage_error: 0.2745140308901469
+ mean_absolute_percentage_error: 0.2204190615205315
+ mean_squared_logarithmic_error: 0.06896337774416102
+ root_mean_squared_logarithmic_error: 0.26260879220650823
+
  LassoRegression with alpha 0.5 R2 score: 0.49385528399080014
  LassoRegression with alpha 0.5 Mean absolute error: 6.940113853319675
  LassoRegression with alpha 0.5 Mean squared error: 85.03176524519185
+ explained_variance_score: 0.5081994425010341
+ max_error: 35.612988817921305
+ median_absolute_error: 5.6079859710449895
+ root_mean_squared_error: 9.22126700867033
+ mean_squared_percentage_error: 0.29829703349957526
+ mean_absolute_percentage_error: 0.2533625742913968
+ mean_squared_logarithmic_error: 0.08223440968461881
+ root_mean_squared_logarithmic_error: 0.2867654262365302

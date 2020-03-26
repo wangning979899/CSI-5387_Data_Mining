@@ -1,4 +1,12 @@
 
- SGD Regression R2 score: 0.5523910750097232
- SGD Regression Mean absolute error: 6.533816337950683
- SGD Regression Mean squared error: 75.19781561985938
+ SGD Regression R2 score: 0.5576485801983823
+ SGD Regression Mean absolute error: 6.483374475457045
+ SGD Regression Mean squared error: 74.3145604305089
+ explained_variance_score: 0.568188211920851
+ max_error: 35.77261579584258
+ median_absolute_error: 5.772778480763903
+ root_mean_squared_error: 8.620589331971969
+ mean_squared_percentage_error: 0.26848583075256977
+ mean_absolute_percentage_error: 0.22545027081056784
+ mean_squared_logarithmic_error: 0.06944563398654785
+ root_mean_squared_logarithmic_error: 0.2635253953351514

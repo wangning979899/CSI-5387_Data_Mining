@@ -1,4 +1,12 @@
 
- Theil Sen Robustness Regression R2 score: 0.5513586035976581
- Theil Sen Regression Mean absolute error: 6.471486759085907
- Theil Sen Regression Mean squared error: 75.3712697011848
+ Theil Sen Robustness Regression R2 score: 0.5567628992293587
+ Theil Sen Regression Mean absolute error: 6.390241983621919
+ Theil Sen Regression Mean squared error: 74.46335387605538
+ explained_variance_score: 0.5568086253584474
+ max_error: 34.96570556611504
+ median_absolute_error: 5.34623450692647
+ root_mean_squared_error: 8.629215136734938
+ mean_squared_percentage_error: 0.2867004002704114
+ mean_absolute_percentage_error: 0.24226248111865567
+ mean_squared_logarithmic_error: 0.19709912219569825
+ root_mean_squared_logarithmic_error: 0.4439584689987322

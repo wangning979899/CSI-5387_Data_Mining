@@ -2,15 +2,59 @@
  RidgeRegression with alpha 0.005 R2 score: 0.5827179916598699
  RidgeRegression with alpha 0.005 Mean absolute error: 6.181465359255465
  RidgeRegression with alpha 0.005 Mean squared error: 70.10292640015464
+ explained_variance_score: 0.5943926505856585
+ max_error: 36.25361081200292
+ median_absolute_error: 4.924696766290888
+ root_mean_squared_error: 8.372749034824503
+ mean_squared_percentage_error: 0.2754416908026081
+ mean_absolute_percentage_error: 0.22195458426548736
+ mean_squared_logarithmic_error: 0.07070652881560219
+ root_mean_squared_logarithmic_error: 0.26590699279184477
+
  RidgeRegression with alpha 0.05 R2 score: 0.5825210918990897
  RidgeRegression with alpha 0.05 Mean absolute error: 6.182294120995541
  RidgeRegression with alpha 0.05 Mean squared error: 70.13600534715525
+ explained_variance_score: 0.5941873692732056
+ max_error: 36.23943733489103
+ median_absolute_error: 4.961443450273503
+ root_mean_squared_error: 8.374724195288776
+ mean_squared_percentage_error: 0.27514069116528417
+ mean_absolute_percentage_error: 0.22174769285925294
+ mean_squared_logarithmic_error: 0.07049272174300608
+ root_mean_squared_logarithmic_error: 0.26550465484244545
+
  RidgeRegression with alpha 0.5 R2 score: 0.5802474870333176
  RidgeRegression with alpha 0.5 Mean absolute error: 6.192809939484397
  RidgeRegression with alpha 0.5 Mean squared error: 70.5179685072787
+ explained_variance_score: 0.5918597611812584
+ max_error: 36.13821239057974
+ median_absolute_error: 5.170156452836158
+ root_mean_squared_error: 8.397497752740318
+ mean_squared_percentage_error: 0.2730553371261384
+ mean_absolute_percentage_error: 0.22040734239621537
+ mean_squared_logarithmic_error: 0.06899155352245673
+ root_mean_squared_logarithmic_error: 0.2626624326439865
+
  RidgeRegression with alpha 5 R2 score: 0.5578694522677816
  RidgeRegression with alpha 5 Mean absolute error: 6.410215326173059
  RidgeRegression with alpha 5 Mean squared error: 74.27745416156975
+ explained_variance_score: 0.5692820696818237
+ max_error: 35.75983962100198
+ median_absolute_error: 5.151472546924049
+ root_mean_squared_error: 8.618436874606076
+ mean_squared_percentage_error: 0.27090391392232566
+ mean_absolute_percentage_error: 0.22517291362856812
+ mean_squared_logarithmic_error: 0.06850468173990656
+ root_mean_squared_logarithmic_error: 0.2617339904175737
+
  RidgeRegression with alpha 50 R2 score: 0.3653565060397975
  RidgeRegression with alpha 50 Mean absolute error: 8.039102810562998
  RidgeRegression with alpha 50 Mean squared error: 106.61942105868269
+ explained_variance_score: 0.37447090483851464
+ max_error: 35.565402663847365
+ median_absolute_error: 7.258870695773272
+ root_mean_squared_error: 10.325668068395512
+ mean_squared_percentage_error: 0.32439086845701504
+ mean_absolute_percentage_error: 0.3017105996090217
+ mean_squared_logarithmic_error: 0.10695974870800895
+ root_mean_squared_logarithmic_error: 0.3270470129935587

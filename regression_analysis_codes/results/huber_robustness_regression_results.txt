@@ -2,3 +2,11 @@
  Huber Robustness Regression R2 score: 0.5980540979571902
  Huber Regression Mean absolute error: 5.85336633971796
  Huber Regression Mean squared error: 67.52647711756381
+ explained_variance_score: 0.5987043688196004
+ max_error: 34.68579725610791
+ median_absolute_error: 4.3432382354727554
+ root_mean_squared_error: 8.217449550655228
+ mean_squared_percentage_error: 0.2487133029944087
+ mean_absolute_percentage_error: 0.20609516944314205
+ mean_squared_logarithmic_error: 0.0649249353835923
+ root_mean_squared_logarithmic_error: 0.2548037193284123

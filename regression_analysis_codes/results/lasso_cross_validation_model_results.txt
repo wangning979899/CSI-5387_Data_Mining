@@ -2,3 +2,11 @@
  10-fold cross validation LassoRegression R2 score: 0.5817168633020395
  10-fold cross validation LassoRegression Mean absolute error: 6.167741559214009
  10-fold cross validation LassoRegression Mean squared error: 70.27111488224439
+ explained_variance_score: 0.5936456037803914
+ max_error: 36.19279811628429
+ median_absolute_error: 4.869506783713671
+ root_mean_squared_error: 8.382786820756232
+ mean_squared_percentage_error: 0.2745140308901469
+ mean_absolute_percentage_error: 0.2204190615205315
+ mean_squared_logarithmic_error: 0.06896337774416102
+ root_mean_squared_logarithmic_error: 0.26260879220650823

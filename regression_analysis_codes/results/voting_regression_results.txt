@@ -2,3 +2,11 @@
  Voting Regression R2 score: 0.6313807247826758
  Voting Regression Mean absolute error: 5.562201590933889
  Voting Regression Mean squared error: 61.92763983050757
+ explained_variance_score: 0.6391162594247303
+ max_error: 36.03617385353189
+ median_absolute_error: 4.401327593427805
+ root_mean_squared_error: 7.869411657202054
+ mean_squared_percentage_error: 0.2599770064188405
+ mean_absolute_percentage_error: 0.1982912556430169
+ mean_squared_logarithmic_error: 0.06188395277739229
+ root_mean_squared_logarithmic_error: 0.24876485438540608

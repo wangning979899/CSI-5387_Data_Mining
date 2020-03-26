@@ -2,60 +2,239 @@
  KNN Regression with k 1, weights uniform R2 score: 0.3281195328555023
  KNN Regression with k 1, weights uniform Mean absolute error: 7.332692307692304
  KNN Regression with k 1, weights uniform Mean squared error: 112.87519230769233
+ explained_variance_score: 0.33677363280356676
+ max_error: 45.9
+ median_absolute_error: 4.399999999999999
+ root_mean_squared_error: 10.624273730834139
+ mean_squared_percentage_error: 0.18722763052594588
+ mean_absolute_percentage_error: 0.22105696252546186
+ mean_squared_logarithmic_error: 0.07570825172675029
+ root_mean_squared_logarithmic_error: 0.2751513251408219
+
  KNN Regression with k 1, weights distance R2 score: 0.32811953285550244
  KNN Regression with k 1, weights distance Mean absolute error: 7.332692307692304
  KNN Regression with k 1, weights distance Mean squared error: 112.87519230769232
+ explained_variance_score: 0.33677363280356687
+ max_error: 45.9
+ median_absolute_error: 4.399999999999999
+ root_mean_squared_error: 10.624273730834137
+ mean_squared_percentage_error: 0.18722763052594588
+ mean_absolute_percentage_error: 0.22105696252546186
+ mean_squared_logarithmic_error: 0.07570825172675028
+ root_mean_squared_logarithmic_error: 0.27515132514082186
+
  KNN Regression with k 3, weights uniform R2 score: 0.596038813459506
  KNN Regression with k 3, weights uniform Mean absolute error: 5.796153846153842
  KNN Regression with k 3, weights uniform Mean squared error: 67.86504273504273
+ explained_variance_score: 0.6080716328797929
+ max_error: 41.06666666666667
+ median_absolute_error: 4.183333333333328
+ root_mean_squared_error: 8.238024200926017
+ mean_squared_percentage_error: 0.18652662012172125
+ mean_absolute_percentage_error: 0.1888244863403621
+ mean_squared_logarithmic_error: 0.05451678149978402
+ root_mean_squared_logarithmic_error: 0.2334882898557956
+
  KNN Regression with k 3, weights distance R2 score: 0.5802600784411769
  KNN Regression with k 3, weights distance Mean absolute error: 5.7811970351297655
  KNN Regression with k 3, weights distance Mean squared error: 70.5158531643672
+ explained_variance_score: 0.5943111087547779
+ max_error: 42.32216039775106
+ median_absolute_error: 3.899770180496163
+ root_mean_squared_error: 8.39737180100817
+ mean_squared_percentage_error: 0.18931093220813308
+ mean_absolute_percentage_error: 0.1879616371697614
+ mean_squared_logarithmic_error: 0.05514793615698115
+ root_mean_squared_logarithmic_error: 0.23483597713506582
+
  KNN Regression with k 5, weights uniform R2 score: 0.5938877719450318
  KNN Regression with k 5, weights uniform Mean absolute error: 6.00653846153846
  KNN Regression with k 5, weights uniform Mean squared error: 68.22641538461538
+ explained_variance_score: 0.6053248841266331
+ max_error: 36.68000000000001
+ median_absolute_error: 4.519999999999997
+ root_mean_squared_error: 8.259928291735672
+ mean_squared_percentage_error: 0.22576894654313967
+ mean_absolute_percentage_error: 0.20422698808237427
+ mean_squared_logarithmic_error: 0.05908495110804674
+ root_mean_squared_logarithmic_error: 0.24307396221736038
+
  KNN Regression with k 5, weights distance R2 score: 0.5904130359715387
  KNN Regression with k 5, weights distance Mean absolute error: 5.807227763182171
  KNN Regression with k 5, weights distance Mean squared error: 68.81016727264601
+ explained_variance_score: 0.6029476505161133
+ max_error: 38.60871860920063
+ median_absolute_error: 3.905378322633119
+ root_mean_squared_error: 8.295189405471463
+ mean_squared_percentage_error: 0.21851047547142388
+ mean_absolute_percentage_error: 0.19526155813043555
+ mean_squared_logarithmic_error: 0.056685782890514944
+ root_mean_squared_logarithmic_error: 0.23808776300035864
+
  KNN Regression with k 7, weights uniform R2 score: 0.5993044533687624
  KNN Regression with k 7, weights uniform Mean absolute error: 5.946565934065932
  KNN Regression with k 7, weights uniform Mean squared error: 67.31641875981157
+ explained_variance_score: 0.6130504609284986
+ max_error: 33.87142857142857
+ median_absolute_error: 4.6642857142857075
+ root_mean_squared_error: 8.204658357287741
+ mean_squared_percentage_error: 0.24059148578176012
+ mean_absolute_percentage_error: 0.20748358277782633
+ mean_squared_logarithmic_error: 0.06060302507566712
+ root_mean_squared_logarithmic_error: 0.24617681669009192
+
  KNN Regression with k 7, weights distance R2 score: 0.601625487410582
  KNN Regression with k 7, weights distance Mean absolute error: 5.776387751115637
  KNN Regression with k 7, weights distance Mean squared error: 66.92648754937395
+ explained_variance_score: 0.6154245751097343
+ max_error: 35.600536563516016
+ median_absolute_error: 4.189942939314797
+ root_mean_squared_error: 8.18086105183152
+ mean_squared_percentage_error: 0.23002895437275617
+ mean_absolute_percentage_error: 0.1977607573392716
+ mean_squared_logarithmic_error: 0.057196331455330325
+ root_mean_squared_logarithmic_error: 0.23915754526113184
+
  KNN Regression with k 9, weights uniform R2 score: 0.5899790400990335
  KNN Regression with k 9, weights uniform Mean absolute error: 6.021901709401709
  KNN Regression with k 9, weights uniform Mean squared error: 68.88307811016143
+ explained_variance_score: 0.6026067525589983
+ max_error: 34.644444444444446
+ median_absolute_error: 4.616666666666671
+ root_mean_squared_error: 8.299583008209595
+ mean_squared_percentage_error: 0.23118918382483308
+ mean_absolute_percentage_error: 0.20885739184181862
+ mean_squared_logarithmic_error: 0.061692318397763894
+ root_mean_squared_logarithmic_error: 0.24837938400310902
+
  KNN Regression with k 9, weights distance R2 score: 0.6073041043697746
  KNN Regression with k 9, weights distance Mean absolute error: 5.748679741832482
  KNN Regression with k 9, weights distance Mean squared error: 65.97248603771406
+ explained_variance_score: 0.620436867927116
+ max_error: 36.136982359763735
+ median_absolute_error: 4.206746968537381
+ root_mean_squared_error: 8.122344860796915
+ mean_squared_percentage_error: 0.2213621420549664
+ mean_absolute_percentage_error: 0.19676104059097219
+ mean_squared_logarithmic_error: 0.05703917724356246
+ root_mean_squared_logarithmic_error: 0.2388287613407616
+
  KNN Regression with k 11, weights uniform R2 score: 0.5563907430307442
  KNN Regression with k 11, weights uniform Mean absolute error: 6.330594405594403
  KNN Regression with k 11, weights uniform Mean squared error: 74.52587571519389
+ explained_variance_score: 0.5730700891106562
+ max_error: 35.627272727272725
+ median_absolute_error: 4.995454545454544
+ root_mean_squared_error: 8.632837060618826
+ mean_squared_percentage_error: 0.24615430052192533
+ mean_absolute_percentage_error: 0.21936230717249477
+ mean_squared_logarithmic_error: 0.06587811811145339
+ root_mean_squared_logarithmic_error: 0.25666732965349015
+
  KNN Regression with k 11, weights distance R2 score: 0.5963517666705405
  KNN Regression with k 11, weights distance Mean absolute error: 5.790102599316878
  KNN Regression with k 11, weights distance Mean squared error: 67.81246693383078
+ explained_variance_score: 0.6123494454064333
+ max_error: 36.65465461137726
+ median_absolute_error: 4.417764289983533
+ root_mean_squared_error: 8.234832538299171
+ mean_squared_percentage_error: 0.23163650294228383
+ mean_absolute_percentage_error: 0.1991775419041929
+ mean_squared_logarithmic_error: 0.05875883388192
+ root_mean_squared_logarithmic_error: 0.24240221509284934
+
  Radius KNN Regression with radius 0.4, weights uniform R2 score: 0.5676716654765812
  Radius KNN Regression with radius 0.4, weights uniform Mean absolute error: 6.20823264541545
  Radius KNN Regression with radius 0.4, weights uniform Mean squared error: 72.63069293678433
+ explained_variance_score: 0.5782910359816048
+ max_error: 38.455555555555556
+ median_absolute_error: 4.719795918367343
+ root_mean_squared_error: 8.522364280924885
+ mean_squared_percentage_error: 0.29816131094580967
+ mean_absolute_percentage_error: 0.2208089583334753
+ mean_squared_logarithmic_error: 0.06691221761907286
+ root_mean_squared_logarithmic_error: 0.25867396007150173
+
  Radius KNN Regression with radius 0.4, weights distance R2 score: 0.6051112361670994
  Radius KNN Regression with radius 0.4, weights distance Mean absolute error: 5.72318405369873
  Radius KNN Regression with radius 0.4, weights distance Mean squared error: 66.34088552569793
+ explained_variance_score: 0.6196558953909748
+ max_error: 37.80767986781235
+ median_absolute_error: 4.406488646408054
+ root_mean_squared_error: 8.144991438037117
+ mean_squared_percentage_error: 0.2812149894012074
+ mean_absolute_percentage_error: 0.20358649346656957
+ mean_squared_logarithmic_error: 0.06028347021703015
+ root_mean_squared_logarithmic_error: 0.24552692360926562
+
  Radius KNN Regression with radius 0.6, weights uniform R2 score: 0.466215784922007
  Radius KNN Regression with radius 0.6, weights uniform Mean absolute error: 7.1817405985601415
  Radius KNN Regression with radius 0.6, weights uniform Mean squared error: 89.67517121580674
+ explained_variance_score: 0.4796438185209766
+ max_error: 35.11466666666667
+ median_absolute_error: 5.759697357203752
+ root_mean_squared_error: 9.469697525043065
+ mean_squared_percentage_error: 0.29055032333994774
+ mean_absolute_percentage_error: 0.2568642107514988
+ mean_squared_logarithmic_error: 0.08344569747336333
+ root_mean_squared_logarithmic_error: 0.2888696894334249
+
  Radius KNN Regression with radius 0.6, weights distance R2 score: 0.5414682257200386
  Radius KNN Regression with radius 0.6, weights distance Mean absolute error: 6.44521106689224
  Radius KNN Regression with radius 0.6, weights distance Mean squared error: 77.03284249504301
+ explained_variance_score: 0.5570007382731823
+ max_error: 35.70576395210229
+ median_absolute_error: 5.239433553016989
+ root_mean_squared_error: 8.77683556272094
+ mean_squared_percentage_error: 0.278701870654308
+ mean_absolute_percentage_error: 0.23157874498620057
+ mean_squared_logarithmic_error: 0.07273523319886217
+ root_mean_squared_logarithmic_error: 0.26969470369078846
+
  Radius KNN Regression with radius 1.0, weights uniform R2 score: 0.26950135382958607
  Radius KNN Regression with radius 1.0, weights uniform Mean absolute error: 8.758137673722064
  Radius KNN Regression with radius 1.0, weights uniform Mean squared error: 122.72298302915414
+ explained_variance_score: 0.28118532242394956
+ max_error: 35.925870646766164
+ median_absolute_error: 8.152821701199564
+ root_mean_squared_error: 11.078040577157774
+ mean_squared_percentage_error: 0.3397483761359216
+ mean_absolute_percentage_error: 0.32579468125945493
+ mean_squared_logarithmic_error: 0.11907912436949267
+ root_mean_squared_logarithmic_error: 0.34507843219983
+
  Radius KNN Regression with radius 1.0, weights distance R2 score: 0.4257828526201849
  Radius KNN Regression with radius 1.0, weights distance Mean absolute error: 7.502598912013621
  Radius KNN Regression with radius 1.0, weights distance Mean squared error: 96.4678601423484
+ explained_variance_score: 0.44259632780222213
+ max_error: 35.56736113535265
+ median_absolute_error: 6.475081243570596
+ root_mean_squared_error: 9.821805340279779
+ mean_squared_percentage_error: 0.3063427982885086
+ mean_absolute_percentage_error: 0.28151465062562836
+ mean_squared_logarithmic_error: 0.09608338870200152
+ root_mean_squared_logarithmic_error: 0.30997320642597725
+
  Radius KNN Regression with radius 10.0, weights uniform R2 score: -0.00638272608606294
  Radius KNN Regression with radius 10.0, weights uniform Mean absolute error: 10.378256823821335
  Radius KNN Regression with radius 10.0, weights uniform Mean squared error: 169.07121027775565
+ explained_variance_score: 0.0
+ max_error: 40.059677419354834
+ median_absolute_error: 8.840322580645163
+ root_mean_squared_error: 13.002738568384572
+ mean_squared_percentage_error: 0.45585607342773177
+ mean_absolute_percentage_error: 0.392493497152128
+ mean_squared_logarithmic_error: 0.16133928414182552
+ root_mean_squared_logarithmic_error: 0.40167061647801117
+
  Radius KNN Regression with radius 10.0, weights distance R2 score: 0.2812189002362918
  Radius KNN Regression with radius 10.0, weights distance Mean absolute error: 8.490009033206032
  Radius KNN Regression with radius 10.0, weights distance Mean squared error: 120.75444789722454
+ explained_variance_score: 0.29816291476304113
+ max_error: 38.03833048854492
+ median_absolute_error: 7.3638943990607295
+ root_mean_squared_error: 10.9888328723857
+ mean_squared_percentage_error: 0.37557331617254486
+ mean_absolute_percentage_error: 0.3288550344411964
+ mean_squared_logarithmic_error: 0.12355142449523357
+ root_mean_squared_logarithmic_error: 0.35149882573805785

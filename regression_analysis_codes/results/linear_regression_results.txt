@@ -2,15 +2,59 @@
  LinearRegression with degree 1 R2 score: 0.5827392405129772
  LinearRegression with degree 1 Mean absolute error: 6.181416940123913
  LinearRegression with degree 1 Mean squared error: 70.0993566157985
+ explained_variance_score: 0.594414879030235
+ max_error: 36.25524925752713
+ median_absolute_error: 4.920506005482835
+ root_mean_squared_error: 8.37253585335999
+ mean_squared_percentage_error: 0.2754765738749621
+ mean_absolute_percentage_error: 0.22198179387541175
+ mean_squared_logarithmic_error: 0.07073128393383375
+ root_mean_squared_logarithmic_error: 0.26595353717112646
+
  LinearRegression with degree 2 R2 score: 0.6753696893197786
  LinearRegression with degree 2 Mean absolute error: 5.244103649555665
  LinearRegression with degree 2 Mean squared error: 54.537541331820485
+ explained_variance_score: 0.6784790576329387
+ max_error: 35.174885868218816
+ median_absolute_error: 4.158421057193451
+ root_mean_squared_error: 7.384953712232765
+ mean_squared_percentage_error: 0.24687519392951932
+ mean_absolute_percentage_error: 0.19148600525171092
+ mean_squared_logarithmic_error: 0.10431249571469783
+ root_mean_squared_logarithmic_error: 0.3229744505602538
+
  LinearRegression with degree 3 R2 score: 0.6205525999503231
  LinearRegression with degree 3 Mean absolute error: 5.346890740355986
  LinearRegression with degree 3 Mean squared error: 63.74675309923821
+ explained_variance_score: 0.6215374445529339
+ max_error: 40.24585544127967
+ median_absolute_error: 3.8207776370414415
+ root_mean_squared_error: 7.984156379933839
+ mean_squared_percentage_error: 0.2604295992490544
+ mean_absolute_percentage_error: 0.19507020164452624
+ mean_squared_logarithmic_error: 0.06128100392199975
+ root_mean_squared_logarithmic_error: 0.2475500028721465
+
  LinearRegression with degree 4 R2 score: -35.46754572701719
  LinearRegression with degree 4 Mean absolute error: 22.7862635944609
  LinearRegression with degree 4 Mean squared error: 6126.508267788891
+ explained_variance_score: -34.809354031858014
+ max_error: 707.7260698936007
+ median_absolute_error: 6.544288690318355
+ root_mean_squared_error: 78.27201458879726
+ mean_squared_percentage_error: 23.38197472576333
+ mean_absolute_percentage_error: 0.9887785549238562
+ mean_squared_logarithmic_error: 0.9027697707546467
+ root_mean_squared_logarithmic_error: 0.9501419739989633
+
  LinearRegression with degree 5 R2 score: -5.295387953011752e+16
  LinearRegression with degree 5 Mean absolute error: 410410853.3296494
  LinearRegression with degree 5 Mean squared error: 8.896194528177743e+18
+ explained_variance_score: -5.243434132148317e+16
+ max_error: 30262037020.628933
+ median_absolute_error: 43361924.03861389
+ root_mean_squared_error: 2982648911.3165402
+ mean_squared_percentage_error: 3.933401383820376e+16
+ mean_absolute_percentage_error: 23754627.234115813
+ mean_squared_logarithmic_error: 101.9684044583856
+ root_mean_squared_logarithmic_error: 10.097940604815697

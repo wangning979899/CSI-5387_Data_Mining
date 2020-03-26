@@ -2,15 +2,59 @@
  Support Vector Regression with kernel rbf R2 score: 0.43067088000186826
  Support Vector Regression with kernel rbf Mean absolute error: 7.379941791120169
  Support Vector Regression with kernel rbf Mean squared error: 95.64667682523599
+ explained_variance_score: 0.43103578547946664
+ max_error: 36.75449790829492
+ median_absolute_error: 6.360820291997298
+ root_mean_squared_error: 9.779911902733888
+ mean_squared_percentage_error: 0.26865800815456714
+ mean_absolute_percentage_error: 0.2628385974121088
+ mean_squared_logarithmic_error: 0.08958052335805974
+ root_mean_squared_logarithmic_error: 0.29930005572679025
+
  Support Vector Regression with kernel linear R2 score: 0.548097276894691
  Support Vector Regression with kernel linear Mean absolute error: 6.201667447523378
  Support Vector Regression with kernel linear Mean squared error: 75.9191690624211
+ explained_variance_score: 0.5485023481699984
+ max_error: 35.03096726290022
+ median_absolute_error: 4.036554910899181
+ root_mean_squared_error: 8.713160681544965
+ mean_squared_percentage_error: 0.23741599932145974
+ mean_absolute_percentage_error: 0.2106836197609075
+ mean_squared_logarithmic_error: 0.06662356200878741
+ root_mean_squared_logarithmic_error: 0.25811540443915276
+
  Support Vector Regression with kernel poly R2 score: 0.05967017061839209
  Support Vector Regression with kernel poly Mean absolute error: 10.018853585528348
  Support Vector Regression with kernel poly Mean squared error: 157.9743950217882
+ explained_variance_score: 0.06650742119232167
+ max_error: 38.34797899965103
+ median_absolute_error: 8.362737316392503
+ root_mean_squared_error: 12.568786537362636
+ mean_squared_percentage_error: 0.43534218857234946
+ mean_absolute_percentage_error: 0.37953699919292827
+ mean_squared_logarithmic_error: 0.15305710126332311
+ root_mean_squared_logarithmic_error: 0.3912251286194729
+
  Support Vector Regression with kernel sigmoid R2 score: 0.30973942663764775
  Support Vector Regression with kernel sigmoid Mean absolute error: 8.434727281989211
  Support Vector Regression with kernel sigmoid Mean squared error: 115.96303028695881
+ explained_variance_score: 0.3100454968883535
+ max_error: 37.716517431270674
+ median_absolute_error: 7.421010467290774
+ root_mean_squared_error: 10.768613201659665
+ mean_squared_percentage_error: 0.31740088236710357
+ mean_absolute_percentage_error: 0.3086350553861937
+ mean_squared_logarithmic_error: 0.11232981510108683
+ root_mean_squared_logarithmic_error: 0.335156403938649
+
  Number Support Vector Regression with kernel linear R2 score: 0.5290319514283559
  Number Support Vector Regression with kernel linear Mean absolute error: 6.638321236936625
  Number Support Vector Regression with kernel linear Mean squared error: 79.12212313484314
+ explained_variance_score: 0.531377891087679
+ max_error: 34.554050194793916
+ median_absolute_error: 5.241634466590389
+ root_mean_squared_error: 8.895061727432989
+ mean_squared_percentage_error: 0.2624482232682993
+ mean_absolute_percentage_error: 0.23271369972510847
+ mean_squared_logarithmic_error: 0.07272645919658854
+ root_mean_squared_logarithmic_error: 0.26967843665482144

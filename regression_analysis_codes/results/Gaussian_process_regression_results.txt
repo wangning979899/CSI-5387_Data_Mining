@@ -2,3 +2,11 @@
  Gaussian Process Regression R2 score: -31.347148727069577
  Gaussian Process Regression Mean absolute error: 35.67777797992412
  Gaussian Process Regression Mean squared error: 5434.286025148376
+ explained_variance_score: -30.683383900246817
+ max_error: 553.3044242858887
+ median_absolute_error: 17.16204376220703
+ root_mean_squared_error: 73.71761000702868
+ mean_squared_percentage_error: 17.88500622253831
+ mean_absolute_percentage_error: 1.3657302905628406
+ mean_squared_logarithmic_error: 2.243926675076149
+ root_mean_squared_logarithmic_error: 1.497974190390525

@@ -90,39 +90,39 @@ data = scaler.fit_transform(data)
 data = pd.DataFrame(data)
 X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.25, random_state=0)
 
-def linear_regression_model():
-    polynomial_features = PolynomialFeatures(degree=2,
-                                            include_bias=False)
-    linear_regression = linear_model.LinearRegression()
-    pipeline = Pipeline([("polynomial_features", polynomial_features),
-                        ("linear_regression", linear_regression)])
-    pipeline.fit(X_train,y_train)
-    prediction = pipeline.predict(X_test)
+# def linear_regression_model():
+#     polynomial_features = PolynomialFeatures(degree=2,
+#                                             include_bias=False)
+#     linear_regression = linear_model.LinearRegression()
+#     pipeline = Pipeline([("polynomial_features", polynomial_features),
+#                         ("linear_regression", linear_regression)])
+#     pipeline.fit(X_train,y_train)
+#     prediction = pipeline.predict(X_test)
 
-    evaluation_function("regression_evaluation_metric",prediction,y_test)
+#     evaluation_function("regression_evaluation_metric",prediction,y_test)
 
-def voting_regression():
-    rg1 = linear_model.ARDRegression()
-    rg2 = linear_model.HuberRegressor()
-    rg3 = neighbors.RadiusNeighborsRegressor(radius=0.4,weights='distance')
-    rg4 = linear_model.LassoLars(alpha=0.005)
-    polynomial_features = PolynomialFeatures(degree=2,
-                                                include_bias=False,interaction_only=False)
-    linear_regression = linear_model.LinearRegression()
-    rg5 = Pipeline([("polynomial_features", polynomial_features),
-                            ("linear_regression", linear_regression)])
-    rg6 = linear_model.LassoLarsIC(criterion='aic')
-    ensemble_model = ensemble.VotingRegressor(estimators=[('ard',rg1),
-                                                ('hubber',rg2),
-                                                ('radiusKNN',rg3),
-                                                ('lassolars',rg4),
-                                                ('multipolynomial',rg5),
-                                                ('lassolarsAIC',rg6)])
-    y = np.array(y_train).ravel()
-    ensemble_model.fit(X_train,y)
-    prediction = ensemble_model.predict(X_test)
-    prediction = np.reshape(prediction,(-1,1))
-    evaluation_function("voting_regression",prediction,y_test)
+# def voting_regression():
+#     rg1 = linear_model.ARDRegression()
+#     rg2 = linear_model.HuberRegressor()
+#     rg3 = neighbors.RadiusNeighborsRegressor(radius=0.4,weights='distance')
+#     rg4 = linear_model.LassoLars(alpha=0.005)
+#     polynomial_features = PolynomialFeatures(degree=2,
+#                                                 include_bias=False,interaction_only=False)
+#     linear_regression = linear_model.LinearRegression()
+#     rg5 = Pipeline([("polynomial_features", polynomial_features),
+#                             ("linear_regression", linear_regression)])
+#     rg6 = linear_model.LassoLarsIC(criterion='aic')
+#     ensemble_model = ensemble.VotingRegressor(estimators=[('ard',rg1),
+#                                                 ('hubber',rg2),
+#                                                 ('radiusKNN',rg3),
+#                                                 ('lassolars',rg4),
+#                                                 ('multipolynomial',rg5),
+#                                                 ('lassolarsAIC',rg6)])
+#     y = np.array(y_train).ravel()
+#     ensemble_model.fit(X_train,y)
+#     prediction = ensemble_model.predict(X_test)
+#     prediction = np.reshape(prediction,(-1,1))
+#     evaluation_function("voting_regression",prediction,y_test)
 
 def ridge_path():
     # Compute paths
@@ -237,7 +237,7 @@ def model_selection():
     # plt.show()
 
 
-linear_regression_model()
-voting_regression()
+# linear_regression_model()
+# voting_regression()
 ridge_path()
 model_selection()

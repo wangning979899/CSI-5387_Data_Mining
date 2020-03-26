@@ -2,3 +2,11 @@
  ARD Regression R2 score: 0.5833197036459157
  ARD Regression Mean absolute error: 6.170867407849247
  ARD Regression Mean squared error: 70.00183943683305
+ explained_variance_score: 0.5952469101384068
+ max_error: 36.15935080905801
+ median_absolute_error: 4.910208643788749
+ root_mean_squared_error: 8.366710191995002
+ mean_squared_percentage_error: 0.2745808952859695
+ mean_absolute_percentage_error: 0.221699887469069
+ mean_squared_logarithmic_error: 0.07023223512214592
+ root_mean_squared_logarithmic_error: 0.26501365082226597

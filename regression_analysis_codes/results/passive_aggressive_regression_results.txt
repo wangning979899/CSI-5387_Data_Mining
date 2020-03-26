@@ -1,4 +1,12 @@
 
- Passive Aggressive Regression R2 score: 0.5889463623695708
- Passive Aggressive Regression Mean absolute error: 5.926889922377854
- Passive Aggressive Regression Mean squared error: 69.05656685258667
+ Passive Aggressive Regression R2 score: 0.5699594370698329
+ Passive Aggressive Regression Mean absolute error: 6.0187399046457974
+ Passive Aggressive Regression Mean squared error: 72.24634978175581
+ explained_variance_score: 0.5902573892148802
+ max_error: 36.10047904134617
+ median_absolute_error: 4.313552155894321
+ root_mean_squared_error: 8.499785278567677
+ mean_squared_percentage_error: 0.21320393476769806
+ mean_absolute_percentage_error: 0.19735936579754043
+ mean_squared_logarithmic_error: 0.06370576323278715
+ root_mean_squared_logarithmic_error: 0.2524000064040949

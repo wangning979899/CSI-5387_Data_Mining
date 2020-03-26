@@ -1,4 +1,12 @@
 
- Robustness Regression R2 score: 0.5866168644146018
- Robustness Regression Mean absolute error: 5.953783145592639
- Robustness Regression Mean squared error: 69.44791999128562
+ Robustness Regression R2 score: 0.531823494489891
+ Robustness Regression Mean absolute error: 6.081167906377089
+ Robustness Regression Mean squared error: 78.65314691762237
+ explained_variance_score: 0.5483504963464056
+ max_error: 36.22154596966554
+ median_absolute_error: 3.706423434671885
+ root_mean_squared_error: 8.868660942759192
+ mean_squared_percentage_error: 0.236191307651868
+ mean_absolute_percentage_error: 0.1968028103586278
+ mean_squared_logarithmic_error: 0.06728929802824227
+ root_mean_squared_logarithmic_error: 0.25940180806664065

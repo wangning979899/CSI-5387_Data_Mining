@@ -2,12 +2,47 @@
  Least Angle Regression with alpha 0.0005 R2 score: 0.5827929745664573
  Least Angle Regression with alpha 0.0005 Mean absolute error: 6.179574808118285
  Least Angle Regression with alpha 0.0005 Mean squared error: 70.09032935288998
+ explained_variance_score: 0.5944776401570059
+ max_error: 36.24574449810841
+ median_absolute_error: 4.920021305965868
+ root_mean_squared_error: 8.371996736316252
+ mean_squared_percentage_error: 0.27535090080927843
+ mean_absolute_percentage_error: 0.22186082743093796
+ mean_squared_logarithmic_error: 0.07063781206085008
+ root_mean_squared_logarithmic_error: 0.2657777493712558
+
  Least Angle Regression with alpha 0.005 R2 score: 0.5829905928467048
  Least Angle Regression with alpha 0.005 Mean absolute error: 6.172300707691317
  Least Angle Regression with alpha 0.005 Mean squared error: 70.05712969539543
+ explained_variance_score: 0.5947634722482065
+ max_error: 36.15216186499264
+ median_absolute_error: 4.939311045994337
+ root_mean_squared_error: 8.37001372133854
+ mean_squared_percentage_error: 0.2741744500563527
+ mean_absolute_percentage_error: 0.22131472928796395
+ mean_squared_logarithmic_error: 0.06989529245507026
+ root_mean_squared_logarithmic_error: 0.26437717839304936
+
  Least Angle Regression with alpha 0.05 R2 score: 0.5715640841795158
  Least Angle Regression with alpha 0.05 Mean absolute error: 6.20050167423205
  Least Angle Regression with alpha 0.05 Mean squared error: 71.97677080164166
+ explained_variance_score: 0.5842452270885155
+ max_error: 35.207376008374986
+ median_absolute_error: 4.509220734868688
+ root_mean_squared_error: 8.483912470177993
+ mean_squared_percentage_error: 0.26725249191435335
+ mean_absolute_percentage_error: 0.2208249516788852
+ mean_squared_logarithmic_error: 0.06827084348120739
+ root_mean_squared_logarithmic_error: 0.26128689879365824
+
  Least Angle Regression with alpha 0.1 R2 score: 0.5320750042782039
  Least Angle Regression with alpha 0.1 Mean absolute error: 6.516697553895829
  Least Angle Regression with alpha 0.1 Mean squared error: 78.61089354501914
+ explained_variance_score: 0.5457435946536425
+ max_error: 34.26418889334103
+ median_absolute_error: 4.589925428821953
+ root_mean_squared_error: 8.866278449553631
+ mean_squared_percentage_error: 0.27064879556286064
+ mean_absolute_percentage_error: 0.2345256004763495
+ mean_squared_logarithmic_error: 0.0744171701086834
+ root_mean_squared_logarithmic_error: 0.2727951064602945

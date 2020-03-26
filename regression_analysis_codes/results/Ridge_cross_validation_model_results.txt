@@ -2,3 +2,11 @@
  10-fold cross validation RidgeRegression R2 score: 0.5802474870333176
  10-fold cross validation RidgeRegression Mean absolute error: 6.192809939484397
  10-fold cross validation RidgeRegression Mean squared error: 70.5179685072787
+ explained_variance_score: 0.5918597611812584
+ max_error: 36.13821239057974
+ median_absolute_error: 5.170156452836158
+ root_mean_squared_error: 8.397497752740318
+ mean_squared_percentage_error: 0.2730553371261384
+ mean_absolute_percentage_error: 0.22040734239621537
+ mean_squared_logarithmic_error: 0.06899155352245673
+ root_mean_squared_logarithmic_error: 0.2626624326439865
