@@ -17,8 +17,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 from regression_evaluation_metric import *
 import os
-# path_current = os.getcwd()
-# print(path_current)
+path_current = os.getcwd()
+print(path_current)
 # os.chdir('./results')
 
 df = pd.read_excel("Real estate valuation data set.xlsx")

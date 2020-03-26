@@ -239,5 +239,5 @@ def model_selection():
 
 # linear_regression_model()
 # voting_regression()
-ridge_path()
-model_selection()
+# ridge_path()
+# model_selection()
