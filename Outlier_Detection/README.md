@@ -13,3 +13,11 @@ threshold=3
 ```
 Final result shows below.
 ![avator](https://github.com/AaPaul/CSI-5387_Data_Mining/blob/master/Outlier_Detection/Outlier%20Detection.png)
+
+
+#### DBSCAN for outlier detection
+Default settings
+
+Final result shows below.
+![avator](https://github.com/AaPaul/CSI-5387_Data_Mining/blob/master/Outlier_Detection/OutlierDetection%20with%20DBSCAN.png)
+
