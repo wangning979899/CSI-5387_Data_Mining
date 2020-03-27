@@ -44,14 +44,8 @@ model.fit(data_std)
 r = pd.concat([data_std, pd.Series(model.labels_, index=data_std.index)], axis=1)
 r.columns = list(data_std.columns) + ["Cluster"]
 
-
-
-
-
-
 norm = []
 
-# Agg
 for i in range(k_value):
     norm_tmp = r[['X1 transaction date', 'X2 house age', 'X3 distance to the nearest MRT station',
                   'X4 number of convenience stores', 'X5 latitude', 'X6 longitude',
