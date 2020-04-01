@@ -43,7 +43,6 @@ model.fit(data_std)
 # r.columns = list(data.columns) + ["Cluster"]
 r = pd.concat([data_std, pd.Series(model.labels_, index=data_std.index)], axis=1)
 r.columns = list(data_std.columns) + ["Cluster"]
-
 norm = []
 
 for i in range(k_value):
@@ -97,4 +96,12 @@ plt.show()
 '''
 for i in discrete_points.keys():
     print(data.loc[i])
+    
+count = []
+for i in range(len(r2)):
+    if (r2['Cluster'][i]==-1):
+        print(data.iloc[i, ])
+        count.append(i)
+for i in count:
+    data.drop(i)
 '''
