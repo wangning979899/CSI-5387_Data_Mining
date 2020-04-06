@@ -11,3 +11,5 @@ Lingfeng Zhang
 Zhihe Huang
 
 Ning Wang
+
+Contents: data preprocessing(feature selection, data cleaning, standarization, bins, re-sampling), data visualization, outlier detection(box plot, K-means, DBSCAN), regression models(linear, support vector, decision tree, voting, MLP, etc.), regression metrics(MAE, MSE, R2, MAPE, MSLE, etc.), model selection methods(n-fold crossvalidation, information criterion, hyper-parameter path, etc.), bin-based multi-classes classification(SVM, decision tree, Naive Bayes, Adaboost, etc.), imbalanced dataset classification evaluation(precision, recall, confusion matrix, f-score), statistical experiments(Friedman Test, Nemenyi Test).
